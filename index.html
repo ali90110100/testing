@@ -414,7 +414,7 @@
 
         .contribute-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 1.2rem;
             margin-bottom: 2rem;
         }
@@ -1407,7 +1407,7 @@
                     
                     <div class="contribute-card" data-detail="blockassist">
                         <div class="contribute-image">
-                            <img src="https://pbs.twimg.com/media/G1tExqtaAAcU4Ox.jpg:large" alt="BlockAssist Game">
+                            <img src="https://pbs.twimg.com/media/GY2b3qGWAAA0p4c?format=jpg&name=medium" alt="BlockAssist Game">
                         </div>
                         <div class="contribute-content">
                             <h3>BlockAssist Game</h3>
@@ -1415,23 +1415,23 @@
                         </div>
                     </div>
                     
+                    <div class="contribute-card" data-detail="codeassist">
+                        <div class="contribute-image">
+                            <img src="https://pbs.twimg.com/media/GY2b3qGWAAA0p4c?format=jpg&name=medium" alt="CodeAssist">
+                        </div>
+                        <div class="contribute-content">
+                            <h3>CodeAssist</h3>
+                            <p>Contribute to AI-powered code generation and help train models for software development assistance.</p>
+                        </div>
+                    </div>
+                    
                     <div class="contribute-card" data-detail="pioneer">
                         <div class="contribute-image">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLoW3Mq3uSZwdutyJdKDaxUzN6O2EMbYSGvw&s" alt="Pioneer Program">
+                            <img src="https://pbs.twimg.com/media/GY2b3qGWAAA0p4c?format=jpg&name=medium" alt="Pioneer Program">
                         </div>
                         <div class="contribute-content">
                             <h3>Pioneer Program</h3>
                             <p>Join the community shaping Gensyn's culture and earn recognition for your contributions.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contribute-card" data-detail="verifier">
-                        <div class="contribute-image">
-                            <img src="https://miro.medium.com/v2/resize:fit:1400/1*N6R4Kg1hVJhXxM2e7JzP_w.png" alt="Become a Verifier">
-                        </div>
-                        <div class="contribute-content">
-                            <h3>Become a Verifier</h3>
-                            <p>Participate in the verification process and help secure the network while earning rewards.</p>
                         </div>
                     </div>
                 </div>
@@ -1536,6 +1536,52 @@
                     </div>
                 </div>
                 
+                <!-- CodeAssist Detail -->
+                <div id="codeassist" class="detail-section">
+                    <div class="detail-header">
+                        <div class="back-btn" data-back="contribute">
+                            <i class="fas fa-arrow-left"></i>
+                        </div>
+                        <h2 class="detail-title">CodeAssist</h2>
+                    </div>
+                    
+                    <div class="detail-content">
+                        <div class="detail-intro">
+                            <p>CodeAssist is Gensyn's AI-powered code generation tool that helps developers write better code faster. By contributing to CodeAssist, you help train models that provide intelligent code suggestions, bug detection, and automated code improvements.</p>
+                        </div>
+                        
+                        <div class="guides-section">
+                            <h3 class="guides-title">Setup Guides</h3>
+                            <div class="guide-cards">
+                                <div class="guide-card">
+                                    <div class="guide-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <div class="guide-content">
+                                        <div class="guide-type">Official Documentation</div>
+                                        <h4 class="guide-title">Official CodeAssist Repository</h4>
+                                        <p class="guide-description">Complete setup guide with detailed instructions from the Gensyn team.</p>
+                                        <a href="https://github.com/gensyn-ai/codeassist" class="guide-link" target="_blank">
+                                            <i class="fas fa-external-link-alt"></i> View Repository
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="guide-card">
+                                    <div class="guide-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <div class="guide-content">
+                                        <div class="guide-type">How It Works</div>
+                                        <h4 class="guide-title">AI-Powered Code Generation</h4>
+                                        <p class="guide-description">CodeAssist uses machine learning models trained on the Gensyn network to provide intelligent code suggestions and automate repetitive coding tasks.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
                 <!-- Pioneer Detail -->
                 <div id="pioneer" class="detail-section">
                     <div class="detail-header">
@@ -1582,49 +1628,6 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Verifier Detail -->
-                <div id="verifier" class="detail-section">
-                    <div class="detail-header">
-                        <div class="back-btn" data-back="contribute">
-                            <i class="fas fa-arrow-left"></i>
-                        </div>
-                        <h2 class="detail-title">Become a Verifier</h2>
-                    </div>
-                    
-                    <div class="detail-content">
-                        <div class="detail-intro">
-                            <p>Verifiers play a crucial role in the Gensyn network by checking the work done by Solvers. They help maintain the integrity of the system and earn rewards for their participation in the verification process. This role is essential for the trustless operation of the protocol.</p>
-                        </div>
-                        
-                        <div class="guides-section">
-                            <h3 class="guides-title">Verification Process</h3>
-                            <div class="guide-cards">
-                                <div class="guide-card">
-                                    <div class="guide-icon">
-                                        <i class="fas fa-check-circle"></i>
-                                    </div>
-                                    <div class="guide-content">
-                                        <div class="guide-type">Protocol Role</div>
-                                        <h4 class="guide-title">How Verification Works</h4>
-                                        <p class="guide-description">Verifiers use probabilistic proof-of-learning and cryptographic challenges to verify ML work without re-executing the entire computation.</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="guide-card">
-                                    <div class="guide-icon">
-                                        <i class="fas fa-gem"></i>
-                                    </div>
-                                    <div class="guide-content">
-                                        <div class="guide-type">Economic Incentives</div>
-                                        <h4 class="guide-title">Earning Rewards</h4>
-                                        <p class="guide-description">Verifiers earn rewards for correctly identifying faulty computations and maintaining network security.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </section>
             
             <!-- Learn Section -->
@@ -1664,7 +1667,7 @@
                         
                         <div class="learn-card">
                             <div class="learn-image">
-                                <img src="https://pbs.twimg.com/media/G1tExqtaAAcU4Ox.jpg:large" alt="BlockAssist">
+                                <img src="https://pbs.twimg.com/media/GY2b3qGWAAA0p4c?format=jpg&name=medium" alt="BlockAssist">
                             </div>
                             <div class="learn-content-card">
                                 <div class="learn-category">Applications</div>
@@ -1678,7 +1681,21 @@
                         
                         <div class="learn-card">
                             <div class="learn-image">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLoW3Mq3uSZwdutyJdKDaxUzN6O2EMbYSGvw&s" alt="Pioneer Program">
+                                <img src="https://pbs.twimg.com/media/GY2b3qGWAAA0p4c?format=jpg&name=medium" alt="CodeAssist">
+                            </div>
+                            <div class="learn-content-card">
+                                <div class="learn-category">Applications</div>
+                                <h3 class="learn-title">CodeAssist: AI-Powered Development</h3>
+                                <p class="learn-description">Learn how CodeAssist uses Gensyn's network to provide intelligent code suggestions and automate development tasks.</p>
+                                <a href="https://blog.gensyn.ai/codeassist-ai-powered-development" class="learn-link" target="_blank">
+                                    Read More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="learn-card">
+                            <div class="learn-image">
+                                <img src="https://pbs.twimg.com/media/GY2b3qGWAAA0p4c?format=jpg&name=medium" alt="Pioneer Program">
                             </div>
                             <div class="learn-content-card">
                                 <div class="learn-category">Community</div>
@@ -1699,20 +1716,6 @@
                                 <h3 class="learn-title">Verde: Gensyn's Verification Protocol</h3>
                                 <p class="learn-description">Dive deep into Verde, Gensyn's innovative protocol for verifying machine learning computations.</p>
                                 <a href="https://blog.gensyn.ai/verde-gensyns-verification-protocol" class="learn-link" target="_blank">
-                                    Read More <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learn-card">
-                            <div class="learn-image">
-                                <img src="https://miro.medium.com/v2/resize:fit:1400/1*GFP_1cZJ8c4Q8Q4Q4Q4Q4Q.png" alt="Economic Model">
-                            </div>
-                            <div class="learn-content-card">
-                                <div class="learn-category">Economics</div>
-                                <h3 class="learn-title">Gensyn's Tokenomics and Incentive Model</h3>
-                                <p class="learn-description">Understand the economic incentives that power the Gensyn network and reward participants.</p>
-                                <a href="https://blog.gensyn.ai/gensyn-tokenomics-and-incentive-model" class="learn-link" target="_blank">
                                     Read More <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
