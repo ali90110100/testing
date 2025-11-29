@@ -268,64 +268,6 @@
             color: var(--text-light);
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        .feature-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: var(--gradient);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-            background: rgba(67, 97, 238, 0.1);
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 12px;
-        }
-
-        .feature-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.7rem;
-            color: var(--dark);
-        }
-
-        .feature-card p {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            line-height: 1.5;
-        }
-
         .section-title {
             font-size: 1.5rem;
             font-weight: 700;
@@ -344,72 +286,6 @@
             height: 3px;
             background: var(--gradient);
             border-radius: 3px;
-        }
-
-        .protocol-explainer {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-        }
-
-        .protocol-explainer h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .protocol-explainer p {
-            font-size: 1rem;
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        .protocol-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .protocol-card {
-            background: var(--light);
-            border-radius: 12px;
-            padding: 1.5rem;
-            border: 1px solid var(--light-gray);
-            transition: all 0.3s ease;
-        }
-
-        .protocol-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .protocol-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.8rem;
-            color: var(--dark);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .protocol-card h3 i {
-            color: var(--primary);
-        }
-
-        .protocol-card p {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            line-height: 1.5;
         }
 
         .contribute-grid {
@@ -537,6 +413,7 @@
             border-bottom: 1px solid var(--light-gray);
         }
 
+        /* Enhanced guides section */
         .guides-section {
             margin-top: 1.5rem;
         }
@@ -548,8 +425,8 @@
         }
 
         .guide-cards {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 1rem;
         }
 
@@ -560,8 +437,7 @@
             transition: all 0.3s ease;
             border: 1px solid var(--light-gray);
             display: flex;
-            align-items: center;
-            gap: 1rem;
+            flex-direction: column;
         }
 
         .guide-card:hover {
@@ -579,6 +455,7 @@
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
+            margin-bottom: 0.8rem;
         }
 
         .guide-content {
@@ -589,6 +466,8 @@
             font-size: 0.8rem;
             color: var(--text-light);
             margin-bottom: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .guide-title {
@@ -617,6 +496,7 @@
             font-weight: 500;
             font-size: 0.85rem;
             transition: all 0.3s ease;
+            margin-top: auto;
         }
 
         .guide-link:hover {
@@ -625,56 +505,30 @@
             box-shadow: 0 3px 8px rgba(67, 97, 238, 0.3);
         }
 
-        .credit {
-            font-size: 0.8rem;
-            color: var(--text-light);
-            margin-top: 0.5rem;
-            font-style: italic;
-        }
-
-        .credit a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .credit a:hover {
-            text-decoration: underline;
-        }
-
-        .social-section {
-            margin-top: 1.5rem;
-        }
-
-        .social-title {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-
-        .social-cards {
+        /* New platform cards */
+        .platform-cards {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 1rem;
+            margin-bottom: 1.5rem;
         }
 
-        .social-card {
+        .platform-card {
             background: var(--light);
             border-radius: 10px;
             padding: 1.2rem;
             transition: all 0.3s ease;
             border: 1px solid var(--light-gray);
             display: flex;
-            align-items: center;
-            gap: 1rem;
+            flex-direction: column;
         }
 
-        .social-card:hover {
+        .platform-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
         }
 
-        .social-icon {
+        .platform-icon {
             width: 40px;
             height: 40px;
             border-radius: 8px;
@@ -684,28 +538,28 @@
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
         }
 
-        .social-content {
+        .platform-content {
             flex: 1;
         }
 
-        .social-title-small {
+        .platform-name {
             font-size: 1rem;
             font-weight: 600;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.5rem;
             color: var(--dark);
         }
 
-        .social-description {
+        .platform-description {
             font-size: 0.85rem;
             color: var(--text-light);
             margin-bottom: 0.8rem;
             line-height: 1.4;
         }
 
-        .social-link {
+        .platform-link {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
@@ -717,460 +571,117 @@
             font-weight: 500;
             font-size: 0.85rem;
             transition: all 0.3s ease;
+            margin-top: auto;
         }
 
-        .social-link:hover {
+        .platform-link:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: 0 3px 8px rgba(67, 97, 238, 0.3);
         }
 
-        .learn-content {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
+        /* Video section */
+        .video-section {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
-        .learn-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-
-        .learn-card {
-            background: var(--card-bg);
-            border-radius: 12px;
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        .learn-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .learn-image {
-            height: 160px;
-            overflow: hidden;
-        }
-
-        .learn-image img {
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
+            border: none;
         }
 
-        .learn-card:hover .learn-image img {
-            transform: scale(1.05);
-        }
-
-        .learn-content-card {
-            padding: 1.5rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .learn-category {
-            font-size: 0.8rem;
-            color: var(--primary);
+        /* Coming soon badge */
+        .coming-soon-badge {
+            display: inline-block;
+            background: var(--warning);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
         }
 
-        .learn-title {
+        /* Help section */
+        .help-section {
+            background: rgba(67, 97, 238, 0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border: 1px solid rgba(67, 97, 238, 0.1);
+        }
+
+        .help-title {
             font-size: 1.1rem;
-            font-weight: 700;
             margin-bottom: 0.8rem;
             color: var(--dark);
-            line-height: 1.3;
-        }
-
-        .learn-description {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: 1.2rem;
-            line-height: 1.5;
-            flex: 1;
-        }
-
-        .learn-link {
-            display: inline-flex;
+            display: flex;
             align-items: center;
             gap: 0.5rem;
-            color: var(--primary);
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            margin-top: auto;
         }
 
-        .learn-link:hover {
-            gap: 0.8rem;
-        }
-
-        .learn-link i {
-            transition: transform 0.3s ease;
-        }
-
-        .learn-link:hover i {
-            transform: translateX(3px);
-        }
-
-        .resources-section {
-            margin-top: 2rem;
-        }
-
-        .resources-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        .resource-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            transition: all 0.3s ease;
+        .help-content {
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
         }
 
-        .resource-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .resource-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
-            background: rgba(67, 97, 238, 0.1);
-            color: var(--primary);
+        .help-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: var(--primary);
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            flex-shrink: 0;
         }
 
-        .resource-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 0.8rem;
-            color: var(--dark);
-        }
-
-        .resource-description {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: 1.2rem;
-            line-height: 1.5;
+        .help-text {
             flex: 1;
         }
 
-        .resource-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
+        .help-description {
+            font-size: 0.9rem;
+            color: var(--text);
+            margin-bottom: 0.8rem;
         }
 
-        .resource-link {
+        .help-link {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: var(--light);
-            color: var(--text);
+            background: var(--primary);
+            color: white;
             padding: 0.5rem 1rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 500;
             font-size: 0.85rem;
             transition: all 0.3s ease;
-            border: 1px solid var(--light-gray);
         }
 
-        .resource-link:hover {
-            background: var(--primary);
-            color: white;
+        .help-link:hover {
+            background: var(--primary-dark);
             transform: translateY(-2px);
-        }
-
-        .quiz-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .quiz-intro {
-            text-align: center;
-            margin-bottom: 2rem;
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-        }
-
-        .quiz-intro h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .quiz-intro p {
-            color: var(--text-light);
-            font-size: 1rem;
-            margin-bottom: 1.2rem;
-        }
-
-        .start-quiz-btn {
-            background: var(--gradient);
-            color: white;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            font-size: 0.95rem;
-            font-weight: 600;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(67, 97, 238, 0.3);
-        }
-
-        .start-quiz-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(67, 97, 238, 0.4);
-        }
-
-        .quiz-questions {
-            display: none;
-        }
-
-        .question-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-        }
-
-        .question-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.2rem;
-        }
-
-        .question-number {
-            font-size: 1rem;
-            color: var(--text-light);
-        }
-
-        .progress-container {
-            width: 200px;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 6px;
-            background: var(--light-gray);
-            border-radius: 3px;
-            overflow: hidden;
-            margin-bottom: 0.5rem;
-        }
-
-        .progress {
-            height: 100%;
-            background: var(--gradient);
-            width: 0%;
-            transition: width 0.5s ease;
-            border-radius: 3px;
-        }
-
-        .progress-text {
-            font-size: 0.8rem;
-            color: var(--text-light);
-            text-align: right;
-        }
-
-        .question-text {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 1.2rem;
-            color: var(--dark);
-        }
-
-        .options {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.8rem;
-        }
-
-        .option {
-            padding: 1rem;
-            background: var(--light);
-            border-radius: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 1px solid var(--light-gray);
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .option:hover {
-            background: rgba(67, 97, 238, 0.05);
-            transform: translateY(-3px);
-            border-color: var(--primary);
-        }
-
-        .option.selected {
-            background: rgba(67, 97, 238, 0.1);
-            border: 1px solid var(--primary);
-            box-shadow: 0 3px 8px rgba(67, 97, 238, 0.1);
-        }
-
-        .option.correct {
-            background: rgba(76, 201, 240, 0.1);
-            border: 1px solid var(--success);
-        }
-
-        .option.incorrect {
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid #ef4444;
-        }
-
-        .option-letter {
-            width: 30px;
-            height: 30px;
-            border-radius: 6px;
-            background: var(--light-gray);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            color: var(--text);
-            flex-shrink: 0;
-            font-size: 0.9rem;
-        }
-
-        .option.selected .option-letter {
-            background: var(--primary);
-            color: white;
-        }
-
-        .option-text {
-            font-size: 0.9rem;
-            color: var(--text);
-        }
-
-        .quiz-actions {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 1.5rem;
-        }
-
-        .quiz-btn {
-            padding: 0.7rem 1.2rem;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            border: none;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-
-        .next-btn {
-            background: var(--gradient);
-            color: white;
             box-shadow: 0 3px 8px rgba(67, 97, 238, 0.3);
-        }
-
-        .next-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 12px rgba(67, 97, 238, 0.4);
-        }
-
-        .next-btn:disabled {
-            background: var(--light-gray);
-            color: var(--text-light);
-            cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
-        }
-
-        .restart-btn {
-            background: transparent;
-            color: var(--text-light);
-            border: 1px solid var(--light-gray);
-        }
-
-        .restart-btn:hover {
-            background: rgba(67, 97, 238, 0.05);
-            color: var(--primary);
-            border-color: var(--primary);
-        }
-
-        .quiz-results {
-            text-align: center;
-            padding: 2rem;
-            background: var(--card-bg);
-            border-radius: 12px;
-            display: none;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-        }
-
-        .results-score {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .results-message {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-        }
-
-        .results-details {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1.2rem;
-        }
-
-        .result-stat {
-            text-align: center;
-        }
-
-        .stat-value {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.3rem;
-        }
-
-        .stat-label {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         footer {
@@ -1254,31 +765,17 @@
                 height: 150px;
             }
             
-            .stats, .features-grid, .contribute-grid, .learn-grid, .resources-grid, .social-cards {
+            .stats, .contribute-grid {
                 grid-template-columns: 1fr;
             }
             
-            .protocol-grid {
+            .guide-cards, .platform-cards {
                 grid-template-columns: 1fr;
             }
             
-            .options {
-                grid-template-columns: 1fr;
-            }
-            
-            .question-header {
+            .help-content {
                 flex-direction: column;
-                gap: 1rem;
                 align-items: flex-start;
-            }
-            
-            .progress-container {
-                width: 100%;
-            }
-            
-            .results-details {
-                flex-direction: column;
-                gap: 1rem;
             }
         }
     </style>
@@ -1333,58 +830,6 @@
                     <div class="stat-card">
                         <div class="stat-value">$50M+</div>
                         <div class="stat-label">Total Funding</div>
-                    </div>
-                </div>
-                
-                <div class="protocol-explainer">
-                    <h2>What is Gensyn?</h2>
-                    <p>Gensyn is a decentralized compute protocol that enables machine learning model training at scale by connecting underutilized compute resources across the globe. It uses cryptographic verification and a novel proof-of-learning system to ensure trustless execution of ML workloads.</p>
-                    
-                    <div class="protocol-grid">
-                        <div class="protocol-card">
-                            <h3><i class="fas fa-shield-alt"></i> Trustless Verification</h3>
-                            <p>Uses probabilistic proof-of-learning and the Verde protocol to verify ML work without re-execution, ensuring correctness on untrusted hardware.</p>
-                        </div>
-                        <div class="protocol-card">
-                            <h3><i class="fas fa-globe"></i> Global Compute Network</h3>
-                            <p>Connects underutilized GPUs worldwide to create a massive, cost-effective compute resource for AI training at 60-80% lower costs than traditional cloud providers.</p>
-                        </div>
-                        <div class="protocol-card">
-                            <h3><i class="fas fa-cogs"></i> Protocol Architecture</h3>
-                            <p>Built on a custom Ethereum rollup with four key roles: Submitters, Solvers, Verifiers, and Whistleblowers to coordinate and verify computations.</p>
-                        </div>
-                        <div class="protocol-card">
-                            <h3><i class="fas fa-rocket"></i> Reproducible Operations</h3>
-                            <p>RepOps ensures bitwise reproducibility of ML operations across different hardware, enabling reliable verification of model training.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <h2 class="section-title">Why Choose Gensyn?</h2>
-                
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <h3>Lightning Fast</h3>
-                        <p>Accelerate AI training with our global network of computing resources, reducing training time by up to 70% compared to traditional cloud providers.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Secure & Verified</h3>
-                        <p>All computations are cryptographically verified using probabilistic proof-of-learning, ensuring trust and reliability in a decentralized environment.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-dollar-sign"></i>
-                        </div>
-                        <h3>Cost Effective</h3>
-                        <p>Access affordable computing power without the overhead of traditional cloud providers, saving up to 80% on AI training costs.</p>
                     </div>
                 </div>
             </section>
@@ -1481,6 +926,35 @@
                                         <div class="credit">Community guide by <a href="https://x.com/0xMoei" target="_blank">0xmoei</a></div>
                                     </div>
                                 </div>
+
+                                <div class="guide-card">
+                                    <div class="guide-icon">
+                                        <i class="fas fa-video"></i>
+                                    </div>
+                                    <div class="guide-content">
+                                        <div class="guide-type">Video Guide</div>
+                                        <h4 class="guide-title">Official Video Tutorial <span class="coming-soon-badge">Coming Soon</span></h4>
+                                        <p class="guide-description">Step-by-step video tutorial for setting up RL Swarm.</p>
+                                        <a href="#" class="guide-link" style="background: var(--light-gray); color: var(--text-light); cursor: not-allowed;">
+                                            <i class="fas fa-clock"></i> Coming Soon
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="help-section">
+                            <h3 class="help-title"><i class="fas fa-question-circle"></i> Need Help?</h3>
+                            <div class="help-content">
+                                <div class="help-icon">
+                                    <i class="fab fa-discord"></i>
+                                </div>
+                                <div class="help-text">
+                                    <p class="help-description">If you encounter any issues or have questions, join our Discord community for support.</p>
+                                    <a href="https://discord.com/gensynai" class="help-link" target="_blank">
+                                        <i class="fab fa-discord"></i> Join Discord
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1531,6 +1005,35 @@
                                         <div class="credit">Community guide by <a href="https://x.com/0xMoei" target="_blank">0xmoei</a></div>
                                     </div>
                                 </div>
+
+                                <div class="guide-card">
+                                    <div class="guide-icon">
+                                        <i class="fas fa-video"></i>
+                                    </div>
+                                    <div class="guide-content">
+                                        <div class="guide-type">Video Guide</div>
+                                        <h4 class="guide-title">Official Video Tutorial <span class="coming-soon-badge">Coming Soon</span></h4>
+                                        <p class="guide-description">Step-by-step video tutorial for setting up BlockAssist.</p>
+                                        <a href="#" class="guide-link" style="background: var(--light-gray); color: var(--text-light); cursor: not-allowed;">
+                                            <i class="fas fa-clock"></i> Coming Soon
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="help-section">
+                            <h3 class="help-title"><i class="fas fa-question-circle"></i> Need Help?</h3>
+                            <div class="help-content">
+                                <div class="help-icon">
+                                    <i class="fab fa-discord"></i>
+                                </div>
+                                <div class="help-text">
+                                    <p class="help-description">If you encounter any issues or have questions, join our Discord community for support.</p>
+                                    <a href="https://discord.com/gensynai" class="help-link" target="_blank">
+                                        <i class="fab fa-discord"></i> Join Discord
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1552,30 +1055,66 @@
                         
                         <div class="guides-section">
                             <h3 class="guides-title">Setup Guides</h3>
-                            <div class="guide-cards">
-                                <div class="guide-card">
-                                    <div class="guide-icon">
-                                        <i class="fas fa-book"></i>
+                            <div class="platform-cards">
+                                <div class="platform-card">
+                                    <div class="platform-icon">
+                                        <i class="fab fa-windows"></i>
                                     </div>
-                                    <div class="guide-content">
-                                        <div class="guide-type">Official Documentation</div>
-                                        <h4 class="guide-title">Official CodeAssist Repository</h4>
-                                        <p class="guide-description">Complete setup guide with detailed instructions from the Gensyn team.</p>
-                                        <a href="https://github.com/gensyn-ai/codeassist" class="guide-link" target="_blank">
-                                            <i class="fas fa-external-link-alt"></i> View Repository
+                                    <div class="platform-content">
+                                        <h4 class="platform-name">Windows (WSL 2)</h4>
+                                        <p class="platform-description">Complete setup guide for Windows using WSL 2.</p>
+                                        <a href="https://docs.gensyn.ai/testnet/codeassist/getting-started/windows-wsl-2" class="platform-link" target="_blank">
+                                            <i class="fas fa-external-link-alt"></i> View Guide
                                         </a>
                                     </div>
                                 </div>
                                 
-                                <div class="guide-card">
-                                    <div class="guide-icon">
-                                        <i class="fas fa-code"></i>
+                                <div class="platform-card">
+                                    <div class="platform-icon">
+                                        <i class="fab fa-linux"></i>
                                     </div>
-                                    <div class="guide-content">
-                                        <div class="guide-type">How It Works</div>
-                                        <h4 class="guide-title">AI-Powered Code Generation</h4>
-                                        <p class="guide-description">CodeAssist uses machine learning models trained on the Gensyn network to provide intelligent code suggestions and automate repetitive coding tasks.</p>
+                                    <div class="platform-content">
+                                        <h4 class="platform-name">Linux</h4>
+                                        <p class="platform-description">Complete setup guide for Linux systems.</p>
+                                        <a href="https://docs.gensyn.ai/testnet/codeassist/getting-started/linux" class="platform-link" target="_blank">
+                                            <i class="fas fa-external-link-alt"></i> View Guide
+                                        </a>
                                     </div>
+                                </div>
+                                
+                                <div class="platform-card">
+                                    <div class="platform-icon">
+                                        <i class="fab fa-apple"></i>
+                                    </div>
+                                    <div class="platform-content">
+                                        <h4 class="platform-name">macOS</h4>
+                                        <p class="platform-description">Complete setup guide for macOS systems.</p>
+                                        <a href="https://docs.gensyn.ai/testnet/codeassist/getting-started/macos" class="platform-link" target="_blank">
+                                            <i class="fas fa-external-link-alt"></i> View Guide
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="video-section">
+                            <h3 class="guides-title">Video Guide</h3>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/ahfmHdNwYbk" title="CodeAssist Setup Tutorial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="help-section">
+                            <h3 class="help-title"><i class="fas fa-question-circle"></i> Need Help?</h3>
+                            <div class="help-content">
+                                <div class="help-icon">
+                                    <i class="fab fa-discord"></i>
+                                </div>
+                                <div class="help-text">
+                                    <p class="help-description">If you encounter any issues or have questions, join our Discord community for support.</p>
+                                    <a href="https://discord.com/gensynai" class="help-link" target="_blank">
+                                        <i class="fab fa-discord"></i> Join Discord
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -1650,34 +1189,18 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="social-section">
-                            <h3 class="social-title">Join the Community</h3>
-                            <div class="social-cards">
-                                <div class="social-card">
-                                    <div class="social-icon">
-                                        <i class="fab fa-twitter"></i>
-                                    </div>
-                                    <div class="social-content">
-                                        <h4 class="social-title-small">Community Discussion</h4>
-                                        <p class="social-description">Join the conversation about the Pioneer Program</p>
-                                        <a href="https://x.com/0xZackHQ/status/1977035569424482321" class="social-link" target="_blank">
-                                            <i class="fas fa-external-link-alt"></i> View Post
-                                        </a>
-                                    </div>
+
+                        <div class="help-section">
+                            <h3 class="help-title"><i class="fas fa-question-circle"></i> Join the Community</h3>
+                            <div class="help-content">
+                                <div class="help-icon">
+                                    <i class="fab fa-discord"></i>
                                 </div>
-                                
-                                <div class="social-card">
-                                    <div class="social-icon">
-                                        <i class="fab fa-discord"></i>
-                                    </div>
-                                    <div class="social-content">
-                                        <h4 class="social-title-small">Official Discord</h4>
-                                        <p class="social-description">Join the Gensyn community on Discord</p>
-                                        <a href="https://discord.com/gensyn" class="social-link" target="_blank">
-                                            <i class="fas fa-external-link-alt"></i> Join Server
-                                        </a>
-                                    </div>
+                                <div class="help-text">
+                                    <p class="help-description">Join our Discord community to connect with other Pioneers and stay updated on program announcements.</p>
+                                    <a href="https://discord.com/gensynai" class="help-link" target="_blank">
+                                        <i class="fab fa-discord"></i> Join Discord
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -1687,195 +1210,17 @@
             
             <!-- Learn Section -->
             <section id="learn" class="content-section">
-                <div class="learn-content">
+                <div class="detail-content">
                     <h2 class="section-title">Learn About Gensyn</h2>
-                    <p style="margin-bottom: 2rem; color: var(--text-light); text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">Explore educational resources, official documentation, and community content to deepen your understanding of the Gensyn protocol and ecosystem.</p>
-                    
-                    <div class="learn-grid">
-                        <div class="learn-card">
-                            <div class="learn-image">
-                                <img src="https://imagedelivery.net/IEMzXmjRvW0g933AN5ejrA/wwwnotionso-image-pbstwimgcom-profile_images-1579608592105312256-ewooevzl_400x400jpg/format=auto,w=2560" alt="Gensyn Protocol">
-                            </div>
-                            <div class="learn-content-card">
-                                <div class="learn-category">Protocol Basics</div>
-                                <h3 class="learn-title">Why the Future of Training is Decentralized</h3>
-                                <p class="learn-description">Learn how Gensyn connects global compute resources and uses cryptographic verification to enable trustless machine learning at scale.</p>
-                                <a href="https://blog.gensyn.ai/gpt-home-why-the-future-of-training-is-decentralized/" class="learn-link" target="_blank">
-                                    Read More <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learn-card">
-                            <div class="learn-image">
-                                <img src="https://research.despread.io/content/images/size/w1024/2025/07/Frame-86.png" alt="RL Swarm">
-                            </div>
-                            <div class="learn-content-card">
-                                <div class="learn-category">Technical Deep Dive</div>
-                                <h3 class="learn-title">RL Swarm: A Framework for Collaborative RL</h3>
-                                <p class="learn-description">Explore how RL Swarm enables distributed training of reinforcement learning models across the Gensyn network.</p>
-                                <a href="https://blog.gensyn.ai/rl-swarm-a-framework-for-collaborative-rl/" class="learn-link" target="_blank">
-                                    Read More <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learn-card">
-                            <div class="learn-image">
-                                <img src="https://pbs.twimg.com/media/G6XnwfLbAAAnB1a?format=jpg&name=large" alt="BlockAssist">
-                            </div>
-                            <div class="learn-content-card">
-                                <div class="learn-category">Applications</div>
-                                <h3 class="learn-title">BlockAssist: Training AI Through Gameplay</h3>
-                                <p class="learn-description">Discover how BlockAssist uses interactive gameplay to train AI models on the Gensyn network.</p>
-                                <a href="https://blog.gensyn.ai/introducing-blockassist/" class="learn-link" target="_blank">
-                                    Read More <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learn-card">
-                            <div class="learn-image">
-                                <img src="https://pbs.twimg.com/media/G6Y3uq9XMAAo-ZT?format=jpg&name=medium" alt="CodeAssist">
-                            </div>
-                            <div class="learn-content-card">
-                                <div class="learn-category">Applications</div>
-                                <h3 class="learn-title">CodeAssist: AI-Powered Development</h3>
-                                <p class="learn-description">Learn how CodeAssist uses Gensyn's network to provide intelligent code suggestions and automate development tasks.</p>
-                                <a href="https://blog.gensyn.ai/introducing-codeassist/" class="learn-link" target="_blank">
-                                    Read More <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learn-card">
-                            <div class="learn-image">
-                                <img src="https://pbs.twimg.com/media/G2_2yI8XQAAUGjw?format=jpg&name=large" alt="Pioneer Program">
-                            </div>
-                            <div class="learn-content-card">
-                                <div class="learn-category">Community</div>
-                                <h3 class="learn-title">Pioneer Program: Shaping Gensyn's Future</h3>
-                                <p class="learn-description">Learn about the Pioneer Program and how community members can contribute to Gensyn's development.</p>
-                                <a href="https://blog.gensyn.ai/pioneer-program-shaping-gensyns-future" class="learn-link" target="_blank">
-                                    Read More <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="learn-card">
-                            <div class="learn-image">
-                                <img src="https://pbs.twimg.com/media/G64tXZYbkAkk1HW?format=png&name=900x900" alt="Verde Verification System">
-                            </div>
-                            <div class="learn-content-card">
-                                <div class="learn-category">Technology</div>
-                                <h3 class="learn-title">Verde: Verification System in Production</h3>
-                                <p class="learn-description">Dive deep into Verde, Gensyn's innovative protocol for verifying machine learning computations in production.</p>
-                                <a href="https://blog.gensyn.ai/verde-verification-system-in-production/" class="learn-link" target="_blank">
-                                    Read More <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="resources-section">
-                        <h2 class="section-title">Official Resources</h2>
-                        <div class="resources-grid">
-                            <div class="resource-card">
-                                <div class="resource-icon">
-                                    <i class="fas fa-file-alt"></i>
-                                </div>
-                                <h3 class="resource-title">Documentation</h3>
-                                <p class="resource-description">Comprehensive technical documentation covering the Gensyn protocol, architecture, and implementation details.</p>
-                                <div class="resource-links">
-                                    <a href="https://docs.gensyn.ai" class="resource-link" target="_blank">
-                                        <i class="fas fa-external-link-alt"></i> Official Docs
-                                    </a>
-                                    <a href="https://docs.gensyn.ai/litepaper" class="resource-link" target="_blank">
-                                        <i class="fas fa-book"></i> Litepaper
-                                    </a>
-                                </div>
-                            </div>
-                            
-                            <div class="resource-card">
-                                <div class="resource-icon">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <h3 class="resource-title">Research & Education</h3>
-                                <p class="resource-description">Academic papers, research materials, and educational content about decentralized machine learning and Gensyn's technology.</p>
-                                <div class="resource-links">
-                                    <a href="https://www.gensyn.ai/research" class="resource-link" target="_blank">
-                                        <i class="fas fa-flask"></i> Research Hub
-                                    </a>
-                                    <a href="https://blog.gensyn.ai" class="resource-link" target="_blank">
-                                        <i class="fas fa-blog"></i> Official Blog
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <p style="margin-bottom: 2rem; color: var(--text-light);">The Learn section is currently under development. Check back soon for comprehensive educational resources about the Gensyn protocol.</p>
                 </div>
             </section>
             
             <!-- Quiz Section -->
             <section id="quiz" class="content-section">
-                <div class="quiz-container">
-                    <div class="quiz-intro" id="quiz-intro">
-                        <h2>Gensyn Knowledge Quiz</h2>
-                        <p>Test your understanding of Gensyn with our interactive quiz. Answer 10 questions and see how well you know this revolutionary protocol!</p>
-                        <button class="start-quiz-btn" id="start-quiz">
-                            <i class="fas fa-play-circle"></i> Start Quiz
-                        </button>
-                    </div>
-                    
-                    <div class="quiz-questions" id="quiz-questions">
-                        <div class="question-card">
-                            <div class="question-header">
-                                <div class="question-number">Question <span id="current-q">1</span>/10</div>
-                                <div class="progress-container">
-                                    <div class="progress-bar">
-                                        <div class="progress" id="quiz-progress"></div>
-                                    </div>
-                                    <div class="progress-text" id="progress-text">0% Complete</div>
-                                </div>
-                            </div>
-                            <div class="question-text" id="question-text">Loading question...</div>
-                            <div class="options" id="options-container">
-                                <!-- Options will be inserted here by JavaScript -->
-                            </div>
-                            <div class="quiz-actions">
-                                <button class="quiz-btn restart-btn" id="restart-quiz">
-                                    <i class="fas fa-redo"></i> Restart Quiz
-                                </button>
-                                <button class="quiz-btn next-btn" id="next-question" disabled>
-                                    Next Question <i class="fas fa-arrow-right"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="quiz-results" id="quiz-results">
-                        <div class="results-score" id="final-score">0/10</div>
-                        <div class="results-message" id="results-message">Thanks for completing the quiz!</div>
-                        
-                        <div class="results-details">
-                            <div class="result-stat">
-                                <div class="stat-value" id="correct-answers">0</div>
-                                <div class="stat-label">Correct</div>
-                            </div>
-                            <div class="result-stat">
-                                <div class="stat-value" id="incorrect-answers">0</div>
-                                <div class="stat-label">Incorrect</div>
-                            </div>
-                            <div class="result-stat">
-                                <div class="stat-value" id="percentage">0%</div>
-                                <div class="stat-label">Score</div>
-                            </div>
-                        </div>
-                        
-                        <button class="start-quiz-btn" id="try-again" style="margin-top: 1.5rem;">
-                            <i class="fas fa-sync-alt"></i> Try Again
-                        </button>
-                    </div>
+                <div class="detail-content">
+                    <h2 class="section-title">Gensyn Knowledge Quiz</h2>
+                    <p style="margin-bottom: 2rem; color: var(--text-light);">The Quiz section is currently under development. Check back soon to test your knowledge of the Gensyn protocol.</p>
                 </div>
             </section>
         </main>
@@ -1959,228 +1304,6 @@
                 document.querySelector('#contribute .contribute-grid').style.display = 'grid';
             });
         });
-        
-        // Quiz functionality with 10 questions
-        const quizData = [
-            {
-                question: "What is Gensyn?",
-                options: [
-                    "A social media platform for AI researchers",
-                    "A decentralized compute protocol for machine learning",
-                    "A hardware manufacturer for GPUs",
-                    "A cryptocurrency exchange"
-                ],
-                correct: 1
-            },
-            {
-                question: "When was Gensyn's public testnet launched?",
-                options: [
-                    "January 2024",
-                    "March 2025",
-                    "July 2025",
-                    "December 2023"
-                ],
-                correct: 1
-            },
-            {
-                question: "Which of these is a current application running on Gensyn's Testnet?",
-                options: [
-                    "BlockAssist",
-                    "ImageNet challenge",
-                    "AlphaGo rematch",
-                    "GPT-Chat"
-                ],
-                correct: 0
-            },
-            {
-                question: "What is 'RL Swarm' in Gensyn?",
-                options: [
-                    "A protocol for data storage",
-                    "An open source reinforcement learning framework where many agents collaborate over the internet",
-                    "A cryptocurrency token for paying fees",
-                    "A video game built on Gensyn"
-                ],
-                correct: 1
-            },
-            {
-                question: "What does the network architecture of Gensyn use to coordinate operations on-chain?",
-                options: [
-                    "A custom Ethereum Rollup",
-                    "A sidechain of Bitcoin",
-                    "Traditional cloud servers only",
-                    "A proof-of-stake blockchain unrelated to Ethereum"
-                ],
-                correct: 0
-            },
-            {
-                question: "What is 'JUDGE' in the Gensyn ecosystem?",
-                options: [
-                    "A verifiable evaluation framework for model outputs",
-                    "A token used to reward compute providers",
-                    "An internal security audit team",
-                    "A user forum for feedback"
-                ],
-                correct: 0
-            },
-            {
-                question: "What mechanism does Gensyn use to ensure the correctness of computations done by untrusted nodes?",
-                options: [
-                    "All tasks are manually audited by humans",
-                    "Verde, a verification protocol that includes dispute resolution and checking only parts of computation when disagreement occurs",
-                    "No verification — it trusts all nodes",
-                    "A single central verifier that re-runs entire tasks"
-                ],
-                correct: 1
-            },
-            {
-                question: "Which of these roles is part of the Gensyn protocol (involved in verifying work)?",
-                options: [
-                    "Solvers",
-                    "Verifiers",
-                    "Whistleblowers",
-                    "All of the above"
-                ],
-                correct: 3
-            },
-            {
-                question: "What milestone was reported for Gensyn's testnet around August-September 2025?",
-                options: [
-                    "1 million transactions",
-                    "45 million transactions and about 130,000 users",
-                    "Mainnet launch completed",
-                    "Token issuance"
-                ],
-                correct: 1
-            },
-            {
-                question: "What is 'RepOps' in Gensyn's verification system?",
-                options: [
-                    "A token staking mechanism",
-                    "A library/system to ensure reproducible ML operators (bitwise reproducibility) across different hardware",
-                    "A GUI dashboard for model training stats",
-                    "A marketplace for buying/selling GPUs"
-                ],
-                correct: 1
-            }
-        ];
-        
-        let currentQuestion = 0;
-        let score = 0;
-        let userAnswers = [];
-        
-        const startQuizBtn = document.getElementById('start-quiz');
-        const quizIntro = document.getElementById('quiz-intro');
-        const quizQuestions = document.getElementById('quiz-questions');
-        const quizResults = document.getElementById('quiz-results');
-        const questionText = document.getElementById('question-text');
-        const optionsContainer = document.getElementById('options-container');
-        const currentQElement = document.getElementById('current-q');
-        const quizProgress = document.getElementById('quiz-progress');
-        const progressText = document.getElementById('progress-text');
-        const nextQuestionBtn = document.getElementById('next-question');
-        const restartQuizBtn = document.getElementById('restart-quiz');
-        const tryAgainBtn = document.getElementById('try-again');
-        const finalScoreElement = document.getElementById('final-score');
-        const resultsMessageElement = document.getElementById('results-message');
-        const correctAnswersElement = document.getElementById('correct-answers');
-        const incorrectAnswersElement = document.getElementById('incorrect-answers');
-        const percentageElement = document.getElementById('percentage');
-        
-        startQuizBtn.addEventListener('click', startQuiz);
-        nextQuestionBtn.addEventListener('click', nextQuestion);
-        restartQuizBtn.addEventListener('click', restartQuiz);
-        tryAgainBtn.addEventListener('click', restartQuiz);
-        
-        function startQuiz() {
-            currentQuestion = 0;
-            score = 0;
-            userAnswers = [];
-            quizIntro.style.display = 'none';
-            quizQuestions.style.display = 'block';
-            quizResults.style.display = 'none';
-            loadQuestion();
-        }
-        
-        function loadQuestion() {
-            const question = quizData[currentQuestion];
-            questionText.textContent = question.question;
-            currentQElement.textContent = currentQuestion + 1;
-            const progressPercent = (currentQuestion / quizData.length) * 100;
-            quizProgress.style.width = `${progressPercent}%`;
-            progressText.textContent = `${Math.round(progressPercent)}% Complete`;
-            
-            optionsContainer.innerHTML = '';
-            question.options.forEach((option, index) => {
-                const optionElement = document.createElement('div');
-                optionElement.className = 'option';
-                optionElement.innerHTML = `
-                    <div class="option-letter">${String.fromCharCode(65 + index)}</div>
-                    <div class="option-text">${option}</div>
-                `;
-                optionElement.addEventListener('click', () => selectOption(index, optionElement));
-                optionsContainer.appendChild(optionElement);
-            });
-            
-            nextQuestionBtn.disabled = true;
-        }
-        
-        function selectOption(optionIndex, optionElement) {
-            // Remove selected class from all options
-            document.querySelectorAll('.option').forEach(opt => {
-                opt.classList.remove('selected');
-            });
-            
-            // Add selected class to clicked option
-            optionElement.classList.add('selected');
-            
-            // Store user's answer
-            userAnswers[currentQuestion] = optionIndex;
-            
-            // Enable next question button
-            nextQuestionBtn.disabled = false;
-        }
-        
-        function nextQuestion() {
-            // Check if answer is correct
-            if (userAnswers[currentQuestion] === quizData[currentQuestion].correct) {
-                score++;
-            }
-            
-            currentQuestion++;
-            
-            if (currentQuestion < quizData.length) {
-                loadQuestion();
-            } else {
-                showResults();
-            }
-        }
-        
-        function showResults() {
-            quizQuestions.style.display = 'none';
-            quizResults.style.display = 'block';
-            finalScoreElement.textContent = `${score}/${quizData.length}`;
-            correctAnswersElement.textContent = score;
-            incorrectAnswersElement.textContent = quizData.length - score;
-            const percentage = Math.round((score / quizData.length) * 100);
-            percentageElement.textContent = `${percentage}%`;
-            
-            // Set results message based on score
-            if (score === quizData.length) {
-                resultsMessageElement.textContent = "Perfect! You're a Gensyn expert!";
-            } else if (score >= quizData.length * 0.7) {
-                resultsMessageElement.textContent = "Great job! You know Gensyn well!";
-            } else if (score >= quizData.length * 0.5) {
-                resultsMessageElement.textContent = "Good effort! Keep learning about Gensyn.";
-            } else {
-                resultsMessageElement.textContent = "Keep exploring to learn more about Gensyn!";
-            }
-        }
-        
-        function restartQuiz() {
-            quizIntro.style.display = 'block';
-            quizQuestions.style.display = 'none';
-            quizResults.style.display = 'none';
-        }
     </script>
 </body>
 </html>
